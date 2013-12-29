@@ -180,7 +180,8 @@ public class Quadrangle extends Point
     public String toString()
     {
         String str;
-        str = " ID = " + this.getId() + " - " + this.getName();
+        str = this.getTime() + ";";
+        str = str + " ID = " + this.getId() + " - " + this.getName();
         str = str + "\n Длина = " + f(this.getAB()) + ", Ширина = " + f(this.getBC());
         str = str + "\n Диагонали: ";
         str = str + "\n   AC = " + f( getD_AC() ) + ", BD = " + f( getD_BD() ); 

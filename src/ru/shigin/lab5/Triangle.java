@@ -179,7 +179,8 @@ public class Triangle extends Point
     public String toString()
     {
         String str;
-        str = " ID = " + this.getId() + " - " + this.getName();
+        str = this.getTime() + ";";
+        str = str + " ID = " + this.getId() + " - " + this.getName();
         str = str + "\n Стороны: AB = " + f(this.getAB()) + ", BC = " + f(this.getBC()) + ", AC = " + f(this.getAB());;
         str = str + "\n Координаты:";
         str = str +	 " A(" + A.getX() + ", " + A.getY() + ", " + A.getZ() +")";

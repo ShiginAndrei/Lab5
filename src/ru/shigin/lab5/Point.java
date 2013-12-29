@@ -1,5 +1,8 @@
 package ru.shigin.lab5;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.text.DecimalFormat;
 
 /**
@@ -16,6 +19,13 @@ public class Point implements Movable, Symmetry
     private double x, y, z;
      
     { id = nextId++; }
+    
+    public String getTime() 
+    {
+	DateFormat dateFormat = new SimpleDateFormat("dd.MM.YYYY HH:mm:ss");
+	Date date = new Date();
+        return dateFormat.format(date);
+    }
     
     public Point(double x, double y, double z)    // конструктор
     { 
@@ -79,7 +89,8 @@ public class Point implements Movable, Symmetry
     public String toString()
     {
         String str;
-        str = " ID = " + this.getId() + " - " + this.getName() + " \n";
+        str = this.getTime() + ";";
+        str = str + " ID = " + this.getId() + " - " + this.getName() + " \n";
         str = str + " Координаты: (" + this.getX() + ", " + this.getY() + ", " + this.getZ() +")\n" ;
         str = str + " Удаленность от центра = " + f(this.distance( new Point0(0,0,0)));
         str = str + "\n-----------------";
